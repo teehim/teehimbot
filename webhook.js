@@ -42,8 +42,26 @@ function sendMessage(event) {
         method: 'POST',
         json: {
             recipient: {id: sender},
-            message: {text: text}
-        }
+            message: {attachment: {
+                type: "template",
+                payload:{
+                    template_type: "button",
+                    text: "Choose your link",
+                    buttons: [
+                        {
+                            type: "web_url",
+                            url: "https://www.google.co.th/search?q="+text,
+                            title: "Google"
+                        },
+                        {
+                            type: "web_url",
+                            url: "https://www.youtube.com/results?search_query="+text,
+                            title: "Youtube"
+                        }
+                    ]
+                }
+            }}
+        }   
     },function (error, response){
         if(error){
             console.log('Error sending message: ',error);
