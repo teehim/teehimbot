@@ -1,0 +1,16 @@
+{
+  "name": "fb_webhook",
+  "version": "1.0.0",
+  "description": "local webhook for fb messaging api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Exzy",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
